@@ -306,7 +306,20 @@
       </section>
       <section id="contact" class="w-full contact-form">
         <h2>Get in Touch</h2>
-        <form class="contact-form__form">
+        <form
+          name="contact"
+          action="./success.html"
+          class="contact-form__form"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+        >
+          <div class="hidden">
+            <label>
+              Don’t fill this out if you’re human:
+              <input name="bot-field" type="text" />
+            </label>
+          </div>
           <label for="name" class="contact-form__label">Name:</label>
           <input
             type="text"
